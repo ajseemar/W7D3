@@ -1,5 +1,7 @@
 json.pokemon do
-  json.partial! 'api/pokemon/poke', poke: @poke
+  json.set! @poke.id do
+    json.partial! 'api/pokemon/poke', poke: @poke
+  end
 end
 
 json.items do
